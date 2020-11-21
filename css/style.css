@@ -16,6 +16,7 @@ img {
   max-width: 1170px;
   margin: 0 auto;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 .row {
   display: flex;
@@ -33,8 +34,6 @@ img {
 
 .sidebar {
   width: 270px;
-  height: 200px;
-  background-color: green;
 }
 
 /* card */
@@ -129,4 +128,259 @@ img {
   font-size: 14px;
   line-height: 16px;
   color: #777777;
+}
+
+.btn-more {
+  align-items: center;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+
+  background-color: #e5e5e5;
+  font-size: 18px;
+  line-height: 80px;
+
+  font-family: inherit;
+  text-align: center;
+  color: #4290c9;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+
+.btn-more:hover {
+  background-color: #d8d8d8;
+}
+
+.btn-img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* sidebar */
+
+.widget {
+  margin-bottom: 30px;
+}
+
+.widget-title {
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.widget-title:hover {
+  cursor: pointer;
+}
+
+.widget-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 1px;
+  width: 20px;
+  height: 20px;
+  background-image: url(./../icons/Shape.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.widget-body {
+  margin-top: 20px;
+}
+
+.location {
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.location__row {
+  display: flex;
+}
+
+.location__row:first-child {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.location__row:last-child .location-btn {
+  font-size: 16px;
+  line-height: 48px;
+  height: 48px;
+}
+
+.location-btn {
+  padding: 0 15px;
+  height: 48px;
+  flex-grow: 1;
+  border: none;
+  background-color: transparent;
+
+  text-align: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 48px;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+
+.location-btn:hover {
+  background-color: #ffeba2;
+}
+
+.location__checkbox {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+  appearance: none;
+}
+
+.location__checkbox:checked + .location-btn {
+  background-color: #ffcf26;
+}
+
+.location__checkbox:checked + .location-btn:hover {
+  background-color: #eebb02;
+}
+
+/* widget-radio */
+
+.radio {
+  display: block;
+  cursor: pointer;
+}
+
+.radio + .radio {
+  margin-top: 15px;
+}
+
+.radio__real {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+  appearance: none;
+}
+
+.radio__fake {
+  position: relative;
+  vertical-align: sub;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #777777;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease-in;
+}
+
+.radio__real:hover + .radio__fake {
+  background-color: #fcd54a;
+}
+
+.radio__real:checked + .radio__fake::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #3c3c3c;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radio__real:checked + .radio__fake {
+  background-color: #ffe074;
+}
+
+.radio__title {
+  margin-left: 7px;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #3c3c3c;
+}
+
+.radio__real:checked ~ .radio__title {
+  font-weight: 500;
+  color: #000000;
+}
+
+/* widget - option-checkbox */
+
+.option-label {
+  display: block;
+  cursor: pointer;
+}
+
+.option-label + .option-label {
+  margin-top: 15px;
+}
+
+.option-checkbox__real {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  appearance: none;
+}
+
+.option-checkbox__fake {
+  position: relative;
+  display: inline-block;
+  vertical-align: sub;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid #777777;
+  border-radius: 2px;
+}
+
+.option-checkbox__real:checked + .option-checkbox__fake {
+  background-color: #ffe074;
+}
+
+.option-checkbox__real:checked + .option-checkbox__fake::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 20px;
+  height: 20px;
+  background-image: url(./../icons/check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.option-sheckbox__title {
+  margin-left: 7px;
+
+  font-size: 16px;
+  line-height: 19px;
+  color: #3c3c3c;
+}
+
+.option-checkbox__real:checked ~ .option-sheckbox__title {
+  font-weight: 500;
+}
+
+/* hidden elements widet */
+.hidden-elements {
+  display: none;
+}
+
+.btn-show-hidden {
+  margin-top: 15px;
+  padding: 0;
+  background-color: transparent;
+
+  font-size: 16px;
+  line-height: 19px;
+  text-align: left;
 }
