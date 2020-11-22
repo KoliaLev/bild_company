@@ -264,56 +264,83 @@
             <div class="widget-title">Дополнительные опции</div>
             <div class="widget-body">
               <label class="option-label">
-                <input type="checkbox" id="option-01" class="option-checkbox__real" checked />
+                <input type="checkbox" name="option-01" class="option-checkbox__real" checked />
                 <span class="option-checkbox__fake"></span>
                 <span class="option-sheckbox__title">Двор без машин</span>
               </label>
 
               <label class="option-label">
-                <input type="checkbox" id="option-02" class="option-checkbox__real" />
+                <input type="checkbox" name="option-02" class="option-checkbox__real" />
                 <span class="option-checkbox__fake"></span>
                 <span class="option-sheckbox__title">Высокие потолки</span>
               </label>
 
               <label class="option-label">
-                <input type="checkbox" id="option-03" class="option-checkbox__real" />
+                <input type="checkbox" name="option-03" class="option-checkbox__real" />
                 <span class="option-checkbox__fake"></span>
                 <span class="option-sheckbox__title">Панорамные окна</span>
               </label>
 
               <label class="option-label">
-                <input type="checkbox" id="option-04" class="option-checkbox__real" />
+                <input type="checkbox" name="option-04" class="option-checkbox__real" />
                 <span class="option-checkbox__fake"></span>
                 <span class="option-sheckbox__title">Есть кладовые</span>
               </label>
 
               <label class="option-label">
-                <input type="checkbox" id="option-05" class="option-checkbox__real" />
+                <input type="checkbox" name="option-05" class="option-checkbox__real" />
                 <span class="option-checkbox__fake"></span>
                 <span class="option-sheckbox__title">Малоэтажный</span>
               </label>
 
+              <!-- hidden element for option -->
               <div class="hidden-elements">
                 <label class="option-label">
-                  <input type="checkbox" id="option-03" class="option-checkbox__real" />
+                  <input type="checkbox" name="option-03" class="option-checkbox__real" />
                   <span class="option-checkbox__fake"></span>
                   <span class="option-sheckbox__title">Дополнительный пункт 1</span>
                 </label>
 
                 <label class="option-label">
-                  <input type="checkbox" id="option-04" class="option-checkbox__real" />
+                  <input type="checkbox" name="option-04" class="option-checkbox__real" />
                   <span class="option-checkbox__fake"></span>
                   <span class="option-sheckbox__title">Дополнительный пункт 2</span>
                 </label>
 
                 <label class="option-label">
-                  <input type="checkbox" id="option-05" class="option-checkbox__real" />
+                  <input type="checkbox" name="option-05" class="option-checkbox__real" />
                   <span class="option-checkbox__fake"></span>
                   <span class="option-sheckbox__title">Дополнительный пункт 3</span>
                 </label>
               </div>
 
+              <!-- \\hidden element for option -->
+
               <button class="btn-more btn-show-hidden">Показать еще</button>
+            </div>
+          </div>
+          <!-- \\widget -->
+
+          <!-- widget -->
+          <div class="widget">
+            <div class="widget-body">
+              <label class="toggle">
+                <input type="checkbox" class="toggle__real" name="term" checked />
+                <span class="toggle__fake"></span>
+                <span class="toggle__title">Услуги 0%</span>
+              </label>
+            </div>
+          </div>
+          <!-- \\widget -->
+
+          <!-- widget -->
+          <div class="widget">
+            <div class="widget-body">
+              <button class="btn-action btn-action--accent">Применить фильтры</button>
+              <button class="btn-action">
+                <img src="./icons/x.svg" alt="Сбросить фильтры" />
+                Сбросить фильтры
+              </button>
             </div>
           </div>
           <!-- \\widget -->

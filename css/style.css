@@ -384,3 +384,106 @@ img {
   line-height: 19px;
   text-align: left;
 }
+
+/* widget toggle */
+
+.toggle {
+  cursor: pointer;
+}
+
+.toggle__real {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  appearance: none;
+}
+
+.toggle__fake {
+  position: relative;
+  display: inline-block;
+  width: 37px;
+  height: 20px;
+  background: #ffe074;
+  background: #c4c4c4;
+  border-radius: 10px;
+  vertical-align: sub;
+  transition: all 0.2s ease-in;
+}
+
+.toggle__fake::before {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: #3c3c3c;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+}
+
+.toggle__real:checked + .toggle__fake {
+  background: #ffe074;
+}
+
+.toggle__real:checked + .toggle__fake::before {
+  left: 19px;
+}
+
+.toggle__title {
+  /* font-family: inherit; */
+  margin-left: 7px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #3c3c3c;
+}
+
+.toggle__real:checked ~ .toggle__title {
+  font-weight: 500;
+}
+
+/* widget button */
+
+.btn-action {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  background-color: transparent;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #3c3c3c;
+
+  transition: all 0.2s ease-in;
+}
+
+.btn-action:hover {
+  background-color: #d8d8d8;
+}
+
+.btn-action + .btn-action {
+  margin-top: 10px;
+}
+
+.btn-action img {
+  display: inline-block;
+  vertical-align: sub;
+  margin-bottom: -2px;
+}
+
+.btn-action--accent {
+  border: none;
+  background-color: #ffcf26;
+  color: #000000;
+  transition: all 0.2s ease-in;
+}
+
+.btn-action--accent:hover {
+  background-color: #fcdd6f;
+}
